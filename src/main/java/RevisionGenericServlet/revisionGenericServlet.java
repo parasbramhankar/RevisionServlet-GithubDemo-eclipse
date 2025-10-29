@@ -7,6 +7,9 @@ import jakarta.servlet.ServletRequest;
 import jakarta.servlet.ServletResponse;
 import jakarta.servlet.annotation.WebServlet;
 import java.io.IOException;
+import java.io.PrintWriter;
+
+import org.apache.catalina.tribes.group.Response;
 
 /**
  * Servlet implementation class revisionGenericServlet
@@ -22,19 +25,22 @@ public class revisionGenericServlet extends GenericServlet {
 
 	
 	public void init(ServletConfig config) throws ServletException {
-		// TODO Auto-generated method stub
+
+	
 	}
 
 	
 	public void destroy() {
-		// TODO Auto-generated method stub
+
+	
 	}
 
 	
 	public void service(ServletRequest request, ServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
 		
-	
+		PrintWriter printWriter=response.getWriter();
+		printWriter.println("Hello word");
+		printWriter.close();
 		
 	}
 
